@@ -1,0 +1,17 @@
+{
+    "name" : "maalls/heisig-bundle",
+    "description" : "Heisig Bundle",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "maalls",
+        "email" : "maalls@gmail.com"
+    }],
+    "license" : [
+        "MIT"
+    ],
+    
+    "autoload": {
+        "psr-4": { "Maalls\\HeisigBundle\\": "" }
+    }
+    
+}
