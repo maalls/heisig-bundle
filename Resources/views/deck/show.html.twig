@@ -1,0 +1,14 @@
+{% extends '@Heisig/base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <ul>
+            {% for card in deck.cards %}
+
+                <li>{{ card.id }} {{ card.word.value }} {{ card.word.reading }} {{ card.word.glossary | join(", ") }}</li>
+
+            {% endfor %}
+
+        </ul>
+    </div>
+{% endblock %}

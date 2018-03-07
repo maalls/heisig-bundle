@@ -1,0 +1,11 @@
+{% extends '@Heisig/base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <ul>
+            {% for deck in decks %}
+                <li><a href="{{ path('maalls_flash_card_deck_show', {id: deck.id}) }}">{{ deck.id }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
