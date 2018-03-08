@@ -16,9 +16,17 @@ class HeisigRepository extends ServiceEntityRepository
     }
 
 
-    public function splitKanjis($sentence)
+    public function findBySentence($sentence)
     {
 
+        $kanjis = \Maalls\HeisigBundle\Lib\Text::splitKanjis($sentence);
+
+        $heisigs = $this->createQueryBuilder("h")
+            ->where("h.kanji IN (:kanjis)")->setParameter("kanjis", $kanjis)
+            ->getQuery()->getResult();
+
+
+        return $heisigs;
 
 
     }

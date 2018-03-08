@@ -172,6 +172,12 @@ class Heisig
 
 
 
+    public function __toString()
+    {
+
+        return $this->getKanji() . ": " . $this->getKeyword();
+
+    }
 
     /**
      * @return mixed
