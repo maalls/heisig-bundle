@@ -31,7 +31,7 @@ class DbLoadCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         
-        $cards = json_decode(file_get_contents(__dir__ . "/../Data/heisig.json"), true);
+        $cards = json_decode(file_get_contents(__dir__ . "/../../Data/heisig.json"), true);
         $rep = $this->em->getRepository(Heisig::class);
 
         foreach($cards as $card) {

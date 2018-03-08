@@ -7,4 +7,4 @@ services:
 
     Maalls\HeisigBundle\:
         resource: '../../*'
-        exclude: '../../{Entity,Migrations,Tests,Data}'
+        exclude: '../../{Entity,Migrations,Tests}'

@@ -15,6 +15,14 @@ class HeisigRepository extends ServiceEntityRepository
 
     }
 
+
+    public function splitKanjis($sentence)
+    {
+
+
+
+    }
+
     
 
 }
