@@ -25,8 +25,24 @@ class HeisigRepository extends ServiceEntityRepository
             ->where("h.kanji IN (:kanjis)")->setParameter("kanjis", $kanjis)
             ->getQuery()->getResult();
 
+        $result = [];
 
-        return $heisigs;
+        foreach($kanjis as $kanji) {
+
+            foreach($heisigs as $heisig) {
+
+                if($kanji == $heisig->getKanji()) {
+
+                    $result[] = $heisig;
+                    break;
+
+                }
+
+            }
+
+        }
+
+        return $result;
 
 
     }
